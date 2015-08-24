@@ -1,5 +1,5 @@
 {
-    "name": "vendor/package",
+    "name": "cultuurnet/uitid-credentials",
     "description": "Brief description of this PHP library",
     "type": "library",
     "license": "Apache-2.0",
@@ -15,12 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Vendor\\Package\\": "src/"
+            "CultuurNet\\UitidCredentials\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vendor\\Package\\": "test/"
+            "CultuurNet\\UitidCredentials\\": "test/"
         }
     },
     "minimum-stability": "dev",
