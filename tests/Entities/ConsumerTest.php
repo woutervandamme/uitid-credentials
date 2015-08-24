@@ -20,16 +20,7 @@ class ConsumerTest extends \PHPUnit_Framework_TestCase
 
     public function testCreateConsumerFromXML()
     {
-        $xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-        <response>
-          <consumer>
-            <key>f4e3c8b7f1c0b57a2313bd92dbeff7c2</key>
-            <name>testchannel</name>
-            <searchPrefix></searchPrefix>
-            <searchPrefixFilterQuery></searchPrefixFilterQuery>
-            <secret>94238234899842389743298897247892</secret>
-          </consumer>
-        </response>';
+        $xml = file_get_contents(dirname(__FILE__) . '/../samples/consumer.xml');
 
         $sxe = new \SimpleXMLElement($xml);
 
