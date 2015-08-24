@@ -20,7 +20,7 @@ class GetConsumerCommand extends Command
 
     public function configure()
     {
-        $this->setName('uitid-credentials')
+        $this->setName('get-consumer')
            ->addArgument(
                'consumer',
                InputArgument::REQUIRED,
@@ -39,8 +39,8 @@ class GetConsumerCommand extends Command
         $consumerKey = $input->getArgument('consumer');
         $consumer= $fetcher->getConsumer($consumerKey);
 
-        $output->writeln($consumer->getKey());
-        $output->writeln($consumer->getName());
-        $output->writeln($consumer->getSecret());
+        $output->writeln('consumer key: ' . $consumer->getKey());
+        $output->writeln('consumer name: ' . $consumer->getName());
+        $output->writeln('consumer secret: ' . $consumer->getSecret());
     }
 }
