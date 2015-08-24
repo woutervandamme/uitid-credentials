@@ -20,7 +20,7 @@ class ConsumerTest extends \PHPUnit_Framework_TestCase
 
     public function testCreateConsumerFromXML()
     {
-        $xml = file_get_contents(dirname(__FILE__) . '/../samples/consumer.xml');
+        $xml = file_get_contents(__DIR__ . '/../samples/consumer.xml');
 
         $sxe = new \SimpleXMLElement($xml);
 

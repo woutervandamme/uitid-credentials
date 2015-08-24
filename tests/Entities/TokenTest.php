@@ -19,7 +19,7 @@ class TokenTest extends \PHPUnit_Framework_TestCase
 
     public function testCreateConsumerFromXML()
     {
-        $xml = file_get_contents(dirname(__FILE__) . '/../samples/token.xml');
+        $xml = file_get_contents(__DIR__ . '/../samples/token.xml');
 
         $sxe = new \SimpleXMLElement($xml);
 

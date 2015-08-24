@@ -43,7 +43,7 @@ class UitidCredentialsFetcherTest extends \PHPUnit_Framework_TestCase
 
     public function testGetConsumer()
     {
-        $xml = file_get_contents(dirname(__FILE__) . '/samples/consumer.xml');
+        $xml = file_get_contents(__DIR__ . '/samples/consumer.xml');
 
         $response = new Response('200', null, $xml);
 
@@ -65,7 +65,7 @@ class UitidCredentialsFetcherTest extends \PHPUnit_Framework_TestCase
 
     public function testGetToken()
     {
-        $xml = file_get_contents(dirname(__FILE__) . '/samples/token.xml');
+        $xml = file_get_contents(__DIR__ . '/samples/token.xml');
 
         $response = new Response('200', null, $xml);
 
