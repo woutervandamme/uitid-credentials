@@ -42,7 +42,7 @@ class TokenTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(
             $correctToken,
-            $this->token->parseFromXml($xmlElement)
+            Token::parseFromXml($xmlElement)
         );
     }
 }

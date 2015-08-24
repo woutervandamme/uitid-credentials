@@ -89,7 +89,7 @@ class Consumer
      * @param \SimpleXMLElement $xmlElement
      * @return Consumer
      */
-    public function parseFromXml(\SimpleXMLElement $xmlElement)
+    public static function parseFromXml(\SimpleXMLElement $xmlElement)
     {
         $consumer = new self();
 

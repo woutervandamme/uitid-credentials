@@ -28,9 +28,8 @@ class UitidCredentialsFetcher extends OAuthProtectedService implements UitidCred
 
         $consumer = new Consumer();
         if (!empty($xmlElement->consumer)) {
-            $consumer = $consumer->parseFromXml($xmlElement->consumer);
+            return Consumer::parseFromXml($xmlElement->consumer);
         }
-        return $consumer;
     }
 
     public function getAccessToken($tokenKey)
@@ -41,10 +40,8 @@ class UitidCredentialsFetcher extends OAuthProtectedService implements UitidCred
         $response = $request->send();
         $xmlElement = new \SimpleXMLElement($response->getBody(true));
 
-        $token = new Token();
         if (!empty($xmlElement->token)) {
-            $token = $token->parseFromXml($xmlElement->token);
+            return Token::parseFromXml($xmlElement->token);
         }
-        return $token;
     }
 }

@@ -34,7 +34,7 @@ class ConsumerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(
             $correctConsumer,
-            $this->consumer->parseFromXml($xmlElement)
+            Consumer::parseFromXml($xmlElement)
         );
     }
 }

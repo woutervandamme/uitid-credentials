@@ -123,7 +123,7 @@ class Token
      * @param \SimpleXMLElement $xmlElement
      * @return Token
      */
-    public function parseFromXml(\SimpleXMLElement $xmlElement)
+    public static function parseFromXml(\SimpleXMLElement $xmlElement)
     {
         $token = new self();
 
