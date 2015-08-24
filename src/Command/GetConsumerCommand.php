@@ -21,11 +21,12 @@ class GetConsumerCommand extends Command
     public function configure()
     {
         $this->setName('get-consumer')
-           ->addArgument(
-               'consumer',
-               InputArgument::REQUIRED,
-               'The consumer key, use d454b97f34c14dac0430ea1bd3f16d45 if you do not have another one to test with.'
-           );
+            ->setDescription('Retrieve consumer information.')
+            ->addArgument(
+                'consumer',
+                InputArgument::REQUIRED,
+                'The consumer key, use d454b97f34c14dac0430ea1bd3f16d45 if you do not have another one to test with.'
+            );
     }
 
     public function execute(InputInterface $input, OutputInterface $output)
