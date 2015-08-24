@@ -90,7 +90,7 @@ class User
      * @param \SimpleXMLElement $xmlElement
      * @return User
      */
-    public function parseFromXml(\SimpleXMLElement $xmlElement)
+    public static function parseFromXml(\SimpleXMLElement $xmlElement)
     {
         $user = new self();
 

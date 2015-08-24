@@ -10,6 +10,9 @@ namespace CultuurNet\UitidCredentials\Entities;
 
 class UserTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var User
+     */
     protected $user;
 
     public function setUp()
@@ -33,7 +36,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(
             $correctConsumer,
-            $this->user->parseFromXml($xmlElement)
+            User::parseFromXml($xmlElement)
         );
     }
 }

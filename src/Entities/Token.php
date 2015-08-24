@@ -136,14 +136,13 @@ class Token
         }
 
         if (!empty($xmlElement->user)) {
-            $user = new User();
-            $userObject = $user->parseFromXml($xmlElement->user);
+            $userObject = User::parseFromXml($xmlElement->user);
             $token->setUser($userObject);
         }
 
         if (!empty($xmlElement->consumer)) {
             $consumer = new Consumer();
-            $consumerObject = $consumer->parseFromXml($xmlElement->consumer);
+            $consumerObject = Consumer::parseFromXml($xmlElement->consumer);
             $token->setConsumer($consumerObject);
         }
 
