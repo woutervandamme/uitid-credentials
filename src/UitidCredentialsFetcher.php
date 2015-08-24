@@ -21,7 +21,7 @@ class UitidCredentialsFetcher extends OAuthProtectedService implements UitidCred
     public function getConsumer($consumerKey)
     {
         $client = $this->getClient();
-        $request = $client->get('/authapi/consumer/' . $consumerKey);
+        $request = $client->get('/uitid/rest/authapi/consumer/' . $consumerKey);
 
         $response = $request->send();
         $xmlElement = new \SimpleXMLElement($response->getBody(true));
@@ -35,7 +35,7 @@ class UitidCredentialsFetcher extends OAuthProtectedService implements UitidCred
     public function getAccessToken($tokenKey)
     {
         $client = $this->getClient();
-        $request = $client->get('/authapi/accesstoken/' . $tokenKey);
+        $request = $client->get('/uitid/rest/authapi/accesstoken/' . $tokenKey);
 
         $response = $request->send();
         $xmlElement = new \SimpleXMLElement($response->getBody(true));
