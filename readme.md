@@ -15,7 +15,7 @@ You can install the CultuurNet\uitid-credentials PHP library in different ways:
 ```json
 {
     "require": {
-        "cultuurnet/uitid-credentials": "dev-master",
+        "cultuurnet/uitid-credentials": "~0.1",
     }
 }
 ```
