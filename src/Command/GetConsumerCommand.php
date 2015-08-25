@@ -8,9 +8,8 @@
 
 namespace CultuurNet\UitidCredentials\Command;
 
-use CultuurNet\Auth\ConsumerCredentials;
+use CultuurNet\Auth\Command\Command;
 use CultuurNet\UitidCredentials\UitidCredentialsFetcher;
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -31,11 +30,9 @@ class GetConsumerCommand extends Command
 
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        $consumerCredentials= new ConsumerCredentials(
-            'd454b97f34c14dac0430ea1bd3f16d45',
-            '5200e24446f960759c9d41f223321c63'
-        );
-        $fetcher = new UitidCredentialsFetcher('http://acc2.uitid.be/', $consumerCredentials, null);
+        parent::execute($input, $output);
+        $consumerCredentials = $this->session->getConsumerCredentials();
+        $fetcher = new UitidCredentialsFetcher('http://acc2.uitid.be/', $consumerCredentials);
 
         $consumerKey = $input->getArgument('consumer');
         $consumer= $fetcher->getConsumer($consumerKey);
