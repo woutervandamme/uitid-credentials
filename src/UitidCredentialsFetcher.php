@@ -25,7 +25,6 @@ class UitidCredentialsFetcher extends OAuthProtectedService implements UitidCred
         $response = $request->send();
         $xmlElement = new \SimpleXMLElement($response->getBody(true));
 
-        $consumer = new Consumer();
         if (!empty($xmlElement->consumer)) {
             return Consumer::parseFromXml($xmlElement->consumer);
         }

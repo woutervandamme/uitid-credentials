@@ -141,7 +141,6 @@ class Token
         }
 
         if (!empty($xmlElement->consumer)) {
-            $consumer = new Consumer();
             $consumerObject = Consumer::parseFromXml($xmlElement->consumer);
             $token->setConsumer($consumerObject);
         }
