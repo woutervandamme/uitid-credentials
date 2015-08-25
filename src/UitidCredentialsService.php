@@ -7,10 +7,20 @@
  */
 namespace CultuurNet\UitidCredentials;
 
-use \CultuurNet\Auth\Guzzle\OAuthProtectedService;
+use CultuurNet\UitidCredentials\Entities\Consumer;
+use CultuurNet\UitidCredentials\Entities\Token;
 
 interface UitidCredentialsService
 {
+    /**
+     * @param string $consumerKey
+     * @return Consumer
+     */
     public function getConsumer($consumerKey);
+
+    /**
+     * @param string $tokenKey
+     * @return Token
+     */
     public function getAccessToken($tokenKey);
 }

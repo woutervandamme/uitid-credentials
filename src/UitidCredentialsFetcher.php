@@ -15,8 +15,7 @@ use CultuurNet\UitidCredentials\Entities\Token;
 class UitidCredentialsFetcher extends OAuthProtectedService implements UitidCredentialsService
 {
     /**
-     * @param $consumerKey
-     * @return Consumer
+     * @inheritdoc
      */
     public function getConsumer($consumerKey)
     {
@@ -32,6 +31,9 @@ class UitidCredentialsFetcher extends OAuthProtectedService implements UitidCred
         }
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getAccessToken($tokenKey)
     {
         $client = $this->getClient();
