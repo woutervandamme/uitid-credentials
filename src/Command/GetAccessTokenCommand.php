@@ -23,7 +23,7 @@ class GetAccessTokenCommand extends Command
             ->addArgument(
                 'token',
                 InputArgument::REQUIRED,
-                'The token key, use  if you do not have another one to test with.'
+                'The user access token to retrieve info about.'
             );
     }
 

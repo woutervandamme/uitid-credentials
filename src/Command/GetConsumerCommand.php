@@ -24,7 +24,7 @@ class GetConsumerCommand extends Command
             ->addArgument(
                 'consumer',
                 InputArgument::REQUIRED,
-                'The consumer key, use d454b97f34c14dac0430ea1bd3f16d45 if you do not have another one to test with.'
+                'The consumer key to retrieve info about.'
             );
     }
 
