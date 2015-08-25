@@ -32,8 +32,8 @@ class UitidCredentialsFetcherTest extends \PHPUnit_Framework_TestCase
         $this->apiMock = new MockPlugin();
         $baseUrl = '';
         $consumerCredentials = new ConsumerCredentials(
-            'f4e3c8b7f1c0b57a2313bd92dbeff7c2',
-            '94238234899842389743298897247892'
+            'key',
+            'secret'
         );
         $tokenCredentials = null;
 
