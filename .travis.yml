@@ -11,3 +11,5 @@ notifications:
       - nicolas.leroy@cultuurnet.be
       - jonas@cultuurnet.be
       - kristof@2dotstwice.be
+notifications:
+  slack: cnet:UzmZZjVck1RNHTyrTSe6NTd9
