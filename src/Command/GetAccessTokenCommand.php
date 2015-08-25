@@ -9,7 +9,6 @@
 namespace CultuurNet\UitidCredentials\Command;
 
 use CultuurNet\Auth\Command\Command;
-use CultuurNet\Auth\ConsumerCredentials;
 use CultuurNet\UitidCredentials\UitidCredentialsFetcher;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
