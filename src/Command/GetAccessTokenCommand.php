@@ -20,7 +20,7 @@ class GetAccessTokenCommand extends Command
     public function configure()
     {
         $this->setName('get-token')
-            ->setDescription('Retrieve token information.')
+            ->setDescription('Retrieve token information')
             ->addArgument(
                 'token',
                 InputArgument::REQUIRED,

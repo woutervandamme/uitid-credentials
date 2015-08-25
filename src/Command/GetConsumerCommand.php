@@ -21,7 +21,7 @@ class GetConsumerCommand extends Command
     public function configure()
     {
         $this->setName('get-consumer')
-            ->setDescription('Retrieve consumer information.')
+            ->setDescription('Retrieve consumer information')
             ->addArgument(
                 'consumer',
                 InputArgument::REQUIRED,
