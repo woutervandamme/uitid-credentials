@@ -7,6 +7,7 @@
  * Time: 16:23
  */
 
+use CultuurNet\Auth\Command\AuthenticateCommand;
 use CultuurNet\UitidCredentials\Command\GetAccessTokenCommand;
 use CultuurNet\UitidCredentials\Command\GetConsumerCommand;
 use Symfony\Component\Console\Application;
@@ -17,5 +18,6 @@ $app= new Application();
 
 $app->add(new GetConsumerCommand());
 $app->add(new GetAccessTokenCommand());
+$app->add(new AuthenticateCommand());
 
 $app->run();
