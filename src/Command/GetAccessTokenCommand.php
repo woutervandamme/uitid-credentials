@@ -12,6 +12,7 @@ use CultuurNet\Auth\Command\Command;
 use CultuurNet\UitidCredentials\UitidCredentialsFetcher;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class GetAccessTokenCommand extends Command
@@ -24,14 +25,23 @@ class GetAccessTokenCommand extends Command
                 'token',
                 InputArgument::REQUIRED,
                 'The user access token to retrieve info about.'
+            )
+            ->addOption(
+                'base-url',
+                null,
+                InputOption::VALUE_REQUIRED,
+                'Base URL of the UiTiD service provider to authenticate with'
             );
     }
 
     public function execute(InputInterface $input, OutputInterface $output)
     {
         parent::execute($input, $output);
+
+        $baseUrl = $input->getOption('base-url');
+
         $consumerCredentials = $this->session->getConsumerCredentials();
-        $fetcher = new UitidCredentialsFetcher('http://acc2.uitid.be/', $consumerCredentials);
+        $fetcher = new UitidCredentialsFetcher($baseUrl, $consumerCredentials);
 
         $tokenKey = $input->getArgument('token');
         $token = $fetcher->getAccessToken($tokenKey);
