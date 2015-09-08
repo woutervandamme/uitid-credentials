@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cultuurnet/Auth.git",
-                "reference": "e3ba0e080035ad3c55212cf592aaeedbbd851468"
+                "reference": "0281fa71ec7d2d1026d309175066e3df9f105e99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cultuurnet/Auth/zipball/e3ba0e080035ad3c55212cf592aaeedbbd851468",
-                "reference": "e3ba0e080035ad3c55212cf592aaeedbbd851468",
+                "url": "https://api.github.com/repos/cultuurnet/Auth/zipball/0281fa71ec7d2d1026d309175066e3df9f105e99",
+                "reference": "0281fa71ec7d2d1026d309175066e3df9f105e99",
                 "shasum": ""
             },
             "require": {
@@ -51,7 +51,7 @@
                 "Apache-2.0"
             ],
             "description": "Authentication service for CultuurNet web services",
-            "time": "2015-07-17 09:39:56"
+            "time": "2015-08-24 20:22:37"
         },
         {
             "name": "guzzle/guzzle",
@@ -387,16 +387,16 @@
         },
         {
             "name": "phing/phing",
-            "version": "2.11.0",
+            "version": "2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phingofficial/phing.git",
-                "reference": "a185fef6df7241e540466b67486a4c4b552260e1"
+                "reference": "63a495a1f619b60404687a0a059039c5046677df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phingofficial/phing/zipball/a185fef6df7241e540466b67486a4c4b552260e1",
-                "reference": "a185fef6df7241e540466b67486a4c4b552260e1",
+                "url": "https://api.github.com/repos/phingofficial/phing/zipball/63a495a1f619b60404687a0a059039c5046677df",
+                "reference": "63a495a1f619b60404687a0a059039c5046677df",
                 "shasum": ""
             },
             "require": {
@@ -406,6 +406,7 @@
                 "ext-pdo_sqlite": "*",
                 "lastcraft/simpletest": "@dev",
                 "pdepend/pdepend": "2.x",
+                "pear-pear.php.net/console_getopt": "~1.3.0",
                 "pear-pear.php.net/http_request2": "2.2.x",
                 "pear-pear.php.net/net_growl": "2.7.x",
                 "pear-pear.php.net/pear_packagefilemanager": "1.7.x",
@@ -415,9 +416,10 @@
                 "pear/versioncontrol_git": "@dev",
                 "pear/versioncontrol_svn": "~0.5",
                 "phpdocumentor/phpdocumentor": "2.x",
-                "phploc/phploc": "2.x",
+                "phploc/phploc": "~2.0.6",
                 "phpmd/phpmd": "~2.2",
                 "phpunit/phpunit": ">=3.7",
+                "sebastian/git": "~1.0",
                 "sebastian/phpcpd": "2.x",
                 "squizlabs/php_codesniffer": "~2.2"
             },
@@ -473,7 +475,7 @@
                 "task",
                 "tool"
             ],
-            "time": "2015-05-20 13:04:38"
+            "time": "2015-08-24 21:02:12"
         },
         {
             "name": "phpdocumentor/reflection-docblock",

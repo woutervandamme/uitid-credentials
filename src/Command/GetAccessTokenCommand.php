@@ -38,7 +38,7 @@ class GetAccessTokenCommand extends Command
     {
         parent::execute($input, $output);
 
-        $baseUrl = $input->getOption('base-url');
+        $baseUrl = $this->resolveBaseUrl('auth', $input);
 
         $consumerCredentials = $this->session->getConsumerCredentials();
         $fetcher = new UitidCredentialsFetcher($baseUrl, $consumerCredentials);
